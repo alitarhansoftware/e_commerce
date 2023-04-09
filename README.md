@@ -4,10 +4,15 @@
 * https://documenter.getpostman.com/view/19175793/2s93XsY6Uj
 
 ## PROJEYİ ÇALIŞTIRMAK İÇİN
+
+ * Öncelikle projede bulunan dest klasörünü silin.
  
  * Proje ana dizindeyken npm i yapılmalıdır.
  * npm start komutu çalıştırılarak TypeScript kodlarının JavaScript'e dönüştürülmesi       sağlanır.
- * Dönüştürülen kodlar "dest" adından bir klasöre çıkartılır . cd komutu ile bu klasöre    geçilerek node start diyerek uygulama ayağa kaldırılabilir.
+ *Dönüştürülen kodlar "dest" adında bir klasöre çıkartılır .
+
+ * Ardından dest klasöründe ana dizine aşağıda bilgileri verilen .env dosyasını ekleyin
+ *  cd komutu ile bu dest klasörüne geçilerek node start diyerek uygulama ayağa kaldırılabilir.
  
  * Testleri çalıştırmak için yine dest klasörünün olduğundan emin olduktan sonra dest klasörünün içindeki test klasörüne geçiş yapılarak **npm test** komutu çalıştırılır.
  
@@ -18,13 +23,17 @@
  1) npm install -g node-pre-gyp
  2) npm install bcrypt
  
- * Bu hatayı alırsanız bu işlemlerden sonra hem ana dizindeyken hem dest klasörünün içindeyken tekrar nmp i yapmanız daha garanti bir yol olacaktır.
+ * Bu hatayı alırsanız bu işlemlerden sonra hem ana dizindeyken hem dest klasörünün içindeyken tekrar npm i yapmanız daha garanti bir yol olacaktır.
 
  
  ## .env Not
  ***Gizli şifreler için .env dosyası kullanılmalıdır.** Bu dosya github'a gönderilirken    gitignore içerisie konur ve kesinlikle gönderilmez.
  
- ## Dışarı çıkarttığımız dest klasörünün ana dizinindeyken bir .env dosyası oluşturun ve içerisine JWT_SECRET=ekinoks_JWT_SECRET değerini yapıştırın
+ ## .env Dosyası İçeriği
+ 
+ ```
+ JWT_SECRET=ekinoks_JWT_SECRET
+ ```
 
  
  ## TABLOLAR

@@ -17,12 +17,14 @@
  
  1) npm install -g node-pre-gyp
  2) npm install bcrypt
+ 
+ * Bu hatayı alırsanız bu işlemlerden sonra hem ana dizindeyken hem dest klasörünün içindeyken tekrar nmp i yapmanız daha garanti bir yol olacaktır.
 
  
  ## .env Not
- ***Gizli şifreler için .env dosyası kullanılmalıdır.** Bu dosya github'a gönderilirken    gitignore içerisie konur ve kesinlikle gönderilmez. Ancak bu proje için kolaylık        olması açısından .env dosyasını da gönderdim.
+ ***Gizli şifreler için .env dosyası kullanılmalıdır.** Bu dosya github'a gönderilirken    gitignore içerisie konur ve kesinlikle gönderilmez.
  
- 
+ ## Dışarı çıkarttığımız dest klasörünün ana dizinindeyken bir .env dosyası oluşturun ve içerisine JWT_SECRET=ekinoks_JWT_SECRET değerini yapıştırın
 
  
  ## TABLOLAR

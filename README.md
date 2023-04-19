@@ -1,7 +1,4 @@
-# EKINOKS E-COMMERCE
-
-  ## POSTMAN DÖKÜMAN LİNKİ
-* https://documenter.getpostman.com/view/19175793/2s93XsY6Uj
+# E-COMMERCE
 
 ## PROJEYİ ÇALIŞTIRMAK İÇİN
 
@@ -32,7 +29,7 @@
  ## .env Dosyası İçeriği
  
  ```
- JWT_SECRET=ekinoks_JWT_SECRET
+ JWT_SECRET=project_JWT_SECRET
  ```
 
  
@@ -103,13 +100,13 @@ içerisindeki hareketleri bulunur. ( login, upsertProduct vs vs)
 
 |user_id | first_name |  last_name  | app_role | email | phone_number | password |
 | ------ | --- |------| ------|------|------|-----|
-| Admin_all | Admin |  Admin    |  Admin   |    admin@ekinoks.com.tr   |   (555)-555-55-55   |  $2b$10$x.8idmT3yGlO9n4z/v5Uee0ZJeqpaaRvKTQF.7mGENd97rlQzVkne   |
+| Admin_all | Admin |  Admin    |  Admin   |    admin@com.tr   |   (555)-555-55-55   |  $2b$10$x.8idmT3yGlO9n4z/v5Uee0ZJeqpaaRvKTQF.7mGENd97rlQzVkne   |
 
 
 * Eğer tablonuzda bu veri yoksa aşağıdaki kodu pgAdmin konsolunda çalıştırırsanız gereklilikler sağlanacaktır.
 ```sh
 INSERT INTO app_authority (user_id, first_name, last_name, app_role, email, phone_number, password)
-VALUES ('Admin_All', 'Admin', 'Admin', 'Admin', 'admin@ekinoks.com.tr', '(555)-555-55-55', '$2b$10$x.8idmT3yGlO9n4z/v5Uee0ZJeqpaaRvKTQF.7mGENd97rlQzVkne');
+VALUES ('Admin_All', 'Admin', 'Admin', 'Admin', 'admin@com.tr', '(555)-555-55-55', '$2b$10$x.8idmT3yGlO9n4z/v5Uee0ZJeqpaaRvKTQF.7mGENd97rlQzVkne');
 ```
 
 * **Add_User_By_Admin** ------------------------> Admin kullanıcısı sisteme yeni sorumlular eklemek için bu metodu kullanır. Sadece Admin_All kişisi bu metodu kullanabilir.
@@ -119,7 +116,7 @@ VALUES ('Admin_All', 'Admin', 'Admin', 'Admin', 'admin@ekinoks.com.tr', '(555)-5
 
 
 
-* Yeni bir kullanıcı eklemek için (add_user_by_admin) bir Admin_All tokenına ihtiyaç vardır. Admin bilgileri sisteme otomatik eklendiğinden dolayı  admin direk olarak kullanıcı ekleme işlemlerine başlayabilir.Giriş bilgileri  **email : admin@ekinoks.com.tr**   **password : Admin1234** şeklindedir.**(login_authority metodu ile giriş yapar)** Token içerisinde app_role kontrolü olduğu için **Admin_All kişisi sisteme eklenirken mutlaka yukardaki tabloda olan bilgilerle eklenmelidir . Aksi halde metoda erişim sağlayamaz. Giriş başarılı olduğu taktirde token alınır ve add_user_by_admin metodu isteği içerisinde gönderilir.**
+* Yeni bir kullanıcı eklemek için (add_user_by_admin) bir Admin_All tokenına ihtiyaç vardır. Admin bilgileri sisteme otomatik eklendiğinden dolayı  admin direk olarak kullanıcı ekleme işlemlerine başlayabilir.Giriş bilgileri  **email : admin@com.tr**   **password : Admin1234** şeklindedir.**(login_authority metodu ile giriş yapar)** Token içerisinde app_role kontrolü olduğu için **Admin_All kişisi sisteme eklenirken mutlaka yukardaki tabloda olan bilgilerle eklenmelidir . Aksi halde metoda erişim sağlayamaz. Giriş başarılı olduğu taktirde token alınır ve add_user_by_admin metodu isteği içerisinde gönderilir.**
 
 
 
@@ -130,7 +127,7 @@ VALUES ('Admin_All', 'Admin', 'Admin', 'Admin', 'admin@ekinoks.com.tr', '(555)-5
     "firstName": "Admin_product",
     "lastName": "Admin_product",
     "appRole": "Admin_product",
-    "email": "adminproduct@ekinoks.com.tr",
+    "email": "adminproduct@com.tr",
     "phoneNumber":"(555)-444-44-44",
     "password": "Adminproduct1234"
  }

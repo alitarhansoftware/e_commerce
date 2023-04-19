@@ -21,13 +21,13 @@ export const authMiddleware = async (
       if (
         path === "/addUserByAdmin" &&
         decoded.app_role === "Admin" &&
-        decoded.userEmail === "admin@ekinoks.com.tr"
+        decoded.userEmail === "admin@com.tr"
       ) {
         next();
       } else if (
         path === "/upsertProduct" &&
         decoded.app_role === "Admin_product" &&
-        decoded.userEmail === "adminproduct@ekinoks.com.tr"
+        decoded.userEmail === "adminproduct@com.tr"
       ) {
         next();
       } else if (
